@@ -1,0 +1,32 @@
+<header>
+  <h1>Todo List ( {{$ctrl.incompleteCount}} )</h1>
+  <label class="hide-completed">
+    <input type="checkbox" ng-model="$ctrl.hideCompleted"/>
+    Hide Completed Tasks
+  </label>
+  <form class="new-task" ng-submit="$ctrl.addTask($ctrl.newTask)">
+    <input ng-model="$ctrl.newTask" type="text" name="text" placeholder="Type to add new tasks"/>
+  </form>
+</header>
+ 
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="task in $ctrl.tasks" ng-class="{'checked': task.checked}">
+	<button class="btn btn-danger dropdown-toggle" ng-click="$ctrl.removeTask(task)">&times;</button>
+	<button class="btn" ngclipboard data-clipboard-text={{task.text}}>
+    Copy to clipboard
+	</button>
+	<input type="checkbox" ng-checked="task.checked" ng-click="$ctrl.setChecked(task)" class="toggle-checked"/>
+	<span class="text">
+		{{task.text}}
+	</span>
+  </li>
+</ul>
+
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="item in $ctrl.item">
+	<span class="text">
+		{{item.link}}
+	</span>
+  </li>
+</ul>
+<div style='position:relative;padding-bottom:calc(100% / 1.85)'><iframe src='https://gfycat.com/ifr/AnnualShallowBlackwidowspider' frameborder='0' scrolling='no' width='25%' height='25%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>

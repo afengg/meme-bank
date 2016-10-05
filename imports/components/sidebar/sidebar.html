@@ -1,0 +1,41 @@
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">MemeBank</a>
+      </li>
+      <div class="col-sm-8 col-sm-offset-2">
+        <li>
+          <input type="text" class="form-control sidebar-search" placeholder="Search tags...">      
+        </li>
+        
+        <form class="new-item" ng-submit="$ctrl.addItem($ctrl.newItem, $ctrl.tag1, $ctrl.tag2, $ctrl.tag3, $ctrl.tag4, $ctrl.tag5)">
+          <div class="form-group">
+            <label for="Link">Link</label>
+            <input ng-model="$ctrl.newItem" type="text" id="Link" class="form-control sidebar-search">
+          </div>
+
+          <div class="form-group">
+            <label for="Tag1">Tag</label>
+            <input ng-model="$ctrl.tag1" type="text" id="Tag1" class="form-control sidebar-search">
+          </div>
+          <div class="form-group">
+            <label for="Tag2">Tag</label>
+            <input ng-model="$ctrl.tag2" type="text" id="Tag2" class="form-control sidebar-search">
+          </div>
+          <div class="form-group">
+            <label for="Tag3">Tag</label>
+            <input ng-model="$ctrl.tag3" type="text" id="Tag3" class="form-control sidebar-search">
+          </div>
+          <div class="form-group">
+            <label for="Tag4">Tag</label>
+            <input ng-model="$ctrl.tag4" type="text" id="Tag4" class="form-control sidebar-search">
+          </div>
+          <div class="form-group">
+            <label for="Tag5">Tag</label>
+            <input ng-model="$ctrl.tag5" type="text" id="Tag5" class="form-control sidebar-search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </ul>
+  </div>
