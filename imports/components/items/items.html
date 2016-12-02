@@ -1,0 +1,18 @@
+<header>
+  <h1>Items</h1>
+</header>
+ 
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="item in $ctrl.items">
+	<button class="btn btn-danger dropdown-toggle" ng-click="$ctrl.removeItem(item)">&times;</button>
+	<button class="btn" ngclipboard data-clipboard-text={{item.link}}>
+    Copy to clipboard
+	</button>
+	<span class="text">
+		<a href= {{item.link}}>{{item.link}}</a>
+	</span><br>
+  <span class="text">
+    {{item.tags}}
+  </span>
+  </li>
+</ul>

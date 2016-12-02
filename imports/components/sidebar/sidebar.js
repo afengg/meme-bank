@@ -1,6 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import template from './sidebar.html';
+import uiRouter from 'angular-ui-router';
 import { Items } from '../../api/items.js';
 
 class SidebarCtrl {
@@ -21,7 +22,8 @@ class SidebarCtrl {
 
 }
 export default angular.module('sidebar', [
-  angularMeteor
+  angularMeteor,
+  uiRouter
 ])
   .component('sidebar', {
     templateUrl: 'imports/components/sidebar/sidebar.html',

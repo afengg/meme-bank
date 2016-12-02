@@ -3,7 +3,6 @@ import angularMeteor from 'angular-meteor';
 import template from './todosList.html';
 import clipboard from 'ngclipboard';
 import { Tasks } from '../../api/tasks.js';
-import { Items } from '../../api/items.js';
 /*import 'bootstrap/dist/css/bootstrap.css';
 import bootstrap from 'bootstrap'
  */
